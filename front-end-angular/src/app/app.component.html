@@ -1,0 +1,32 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img alt="Halliburton Logo" src="assets/halliburton-logo-white.png" />
+  <div class="spacer"></div>
+</div>
+<div class="content" role="main">
+  <h2>Welcome</h2>
+  <div class="card-container">
+    <div class="response-area">
+      <div class="card" target="_blank" rel="noopener" (click)="sendGetControl()"><span>Click to GET</span></div>
+      <div class="control-area"></div>
+      <p>Response from service</p>
+      <div class="service-response">
+        <p>{{getResponse}}</p>
+      </div>
+    </div>
+    <div class="response-area">
+      <div class="card" target="_blank" rel="noopener" (click)="sendPostControl()"><span>Click to POST</span></div>
+      <div class="control-area">
+        <label for="post-control">Select Operation Mode</label>
+        <select name="mode" [(ngModel)]="postControl" class="post-control" id="post-control">
+          <option value="start">Start</option>
+          <option value="stop">Stop</option>
+        </select>
+      </div>
+      <p>Response from service</p>
+      <div class="service-response">
+        <p>{{postResponse}}</p>
+      </div>
+    </div>
+  </div>
+</div>
